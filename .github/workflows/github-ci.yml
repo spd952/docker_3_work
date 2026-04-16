@@ -113,17 +113,17 @@ jobs:
 
       - name: Build docker image
         run: |
-          docker build -t nosmok1ng/latin-checker:1.0.0 -f cicd/Dockerfile .
-          docker tag nosmok1ng/latin-checker:1.0.0 nosmok1ng/latin-checker:latest
+          docker build -t ilgringoartur/latin-checker:1.0.0 -f cicd/Dockerfile .
+          docker tag ilgringoartur/latin-checker:1.0.0 ilgringoartur/latin-checker:latest
 
       - name: Run container
         run: |
-          echo "3\n1 2 3\n2 3 1\n3 1 2" | docker run -i nosmok1ng/latin-checker:1.0.0
+          echo "3\n1 2 3\n2 3 1\n3 1 2" | docker run -i ilgringoartur/latin-checker:1.0.0
 
       - name: Log in to DockerHub
         run: docker login -u ${{ secrets.DOCKERHUB_NAME }} -p ${{ secrets.DOCKERHUB_TOKEN }}
 
       - name: Push to DockerHub
         run: |
-          docker push nosmok1ng/latin-checker:1.0.0
-          docker push nosmok1ng/latin-checker:latest
+          docker push ilgringoartur/latin-checker:1.0.0
+          docker push ilgringoartur/latin-checker:latest
