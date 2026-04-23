@@ -3,5 +3,5 @@ Version: 1.0
 Architecture: amd64
 Priority: optional
 Depends: g++, make, libc6
-Maintainer: NoSmok1ng <igoranpoliakidse@gmail.com>
+Maintainer: spd952 <arabchik122@icloud.com>
 Description: Checks the rows and columns of a matrix of the specified size n for the presence of numbers from 1 to n
